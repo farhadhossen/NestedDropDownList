@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="division_name">
+        <item>ঢাকা</item>
+        <item>চট্টগ্রাম</item>
+        <item>রাজশাহী</item>
+        <item>খুলনা</item>
+        <item>বরিশাল</item>
+        <item>সিলেট</item>
+        <item>রংপুর</item>
+        <item>ময়মনসিংহ</item>
+    </string-array>
+</resources>
