@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         tv = findViewById(R.id.idTv);
 
 
-        Spinner spin = findViewById(R.id.coursesspinner);
+        Spinner spin = findViewById(R.id.spinner1);
         spin.setOnItemSelectedListener(this);
 
         divName = getResources().getStringArray(R.array.division_name);

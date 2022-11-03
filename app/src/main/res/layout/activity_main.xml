@@ -11,7 +11,7 @@
 
     <!--Spinner widget-->
     <Spinner
-        android:id="@+id/coursesspinner"
+        android:id="@+id/spinner1"
         android:layout_height="50dp"
         android:layout_width="160dp"
         android:layout_marginEnd="10dp"
