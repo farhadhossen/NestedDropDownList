@@ -10,4 +10,16 @@
         <item>রংপুর</item>
         <item>ময়মনসিংহ</item>
     </string-array>
+
+    <string-array name="division_details">
+        <item>ঢাকা ঢাকা</item>
+        <item>চট্টগ্রাম চট্টগ্রাম</item>
+        <item>রাজশাহী রাজশাহী</item>
+        <item>খুলনা খুলনা</item>
+        <item>বরিশাল বরিশাল</item>
+        <item>সিলেট সিলেট</item>
+        <item>রংপুর রংপুর</item>
+        <item>ময়মনসিংহ ময়মনসিংহ</item>
+    </string-array>
+
 </resources>
