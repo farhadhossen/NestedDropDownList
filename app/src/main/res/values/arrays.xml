@@ -10,4 +10,104 @@
         <item>রংপুর</item>
         <item>ময়মনসিংহ</item>
     </string-array>
+
+
+    <array name="div_items">
+        <item>@array/dhaka_items</item>
+        <item>@array/chottogram_items</item>
+        <item>@array/rajshahi_items</item>
+        <item>@array/khulna_items</item>
+        <item>@array/barishal_items</item>
+        <item>@array/sylhet_items</item>
+        <item>@array/rongpur_items</item>
+        <item>@array/moymonshing_items</item>
+    </array>
+
+    <string-array name="dhaka_items">
+        <item>ঢাকা</item>
+        <item>কিশোরগঞ্জ</item>
+        <item>গাজীপুর</item>
+        <item>গোপালগঞ্জ</item>
+        <item>টাঙ্গাইল</item>
+        <item>নরসিংদী</item>
+        <item>নারায়ণগঞ্জ</item>
+        <item>ফরিদপুর</item>
+        <item>মাদারীপুর</item>
+        <item>মানিকগঞ্জ</item>
+        <item>মুন্সিগঞ্জ</item>
+        <item>রাজবাড়ী</item>
+        <item>শরীয়তপুর</item>
+    </string-array>
+    <string-array name="chottogram_items">
+        <item>চট্টগ্রাম</item>
+        <item>ব্রাহ্মণবাড়িয়া</item>
+        <item>কুমিল্লা</item>
+        <item>চাঁদপুর</item>
+        <item>লক্ষ্মীপুর</item>
+        <item>নোয়াখালী</item>
+        <item>ফেনী</item>
+        <item>খাগড়াছড়ি</item>
+        <item>রাঙ্গামাটি</item>
+        <item>বান্দরবান</item>
+        <item>কক্সবাজার</item>
+    </string-array>
+
+    <string-array name="rajshahi_items">
+        <item>রাজশাহী</item>
+        <item>চাঁপাইনবাবগঞ্জ</item>
+        <item>জয়পুরহাট</item>
+        <item>নওগাঁ</item>
+        <item>নাটোর</item>
+        <item>পাবনা</item>
+        <item>বগুড়া</item>
+        <item>সিরাজগঞ্জ</item>
+    </string-array>
+
+    <string-array name="khulna_items">
+        <item>খুলনা</item>
+        <item>কুষ্টিয়া</item>
+        <item>চুয়াডাঙ্গা</item>
+        <item>ঝিনাইদহ</item>
+        <item>নড়াইল</item>
+        <item>বাগেরহাট</item>
+        <item>মাগুরা</item>
+        <item>মেহেরপুর</item>
+        <item>যশোর</item>
+        <item>সাতক্ষীরা</item>
+    </string-array>
+
+    <string-array name="barishal_items">
+        <item>বরিশাল</item>
+        <item>পটুয়াখালী</item>
+        <item>ভোলা</item>
+        <item>পিরোজপুর</item>
+        <item>বরগুনা</item>
+        <item>ঝালকাঠি</item>
+    </string-array>
+
+    <string-array name="sylhet_items">
+        <item>সিলেট</item>
+        <item>মৌলভীবাজার</item>
+        <item>সুনামগঞ্জ</item>
+        <item>হবিগঞ্জ</item>
+    </string-array>
+
+    <string-array name="rongpur_items">
+        <item>রংপুর</item>
+        <item>কুড়িগ্রাম</item>
+        <item>গাইবান্ধা</item>
+        <item>ঠাকুরগাঁও</item>
+        <item>দিনাজপুর</item>
+        <item>নীলফামারী</item>
+        <item>পঞ্চগড়</item>
+        <item>লালমনিরহাট</item>
+    </string-array>
+
+    <string-array name="moymonshing_items">
+        <item>ময়মনসিংহ</item>
+        <item>জামালপুর</item>
+        <item>নেত্রকোনা</item>
+        <item>শেরপুর</item>
+    </string-array>
+
 </resources>
