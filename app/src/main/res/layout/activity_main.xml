@@ -34,7 +34,8 @@
         android:id="@+id/idBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Details"/>
+        android:text="Show Details"
+        android:onClick="onBtnClick"/>
 
     <Space
         android:layout_width="wrap_content"

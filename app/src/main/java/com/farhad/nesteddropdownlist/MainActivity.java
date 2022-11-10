@@ -150,19 +150,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                tv.setText(divDetails);
-
-                Intent in = new Intent(MainActivity.this, DetailsActivity.class);
-                in.putExtra("div", divDetails);
-                in.putExtra("dis", disDetails);
-                startActivity(in);
-            }
-        });
-
-
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                tv.setText(divDetails);
+//
+//                Intent in = new Intent(MainActivity.this, DetailsActivity.class);
+//                in.putExtra("div", divDetails);
+//                in.putExtra("dis", disDetails);
+//                startActivity(in);
+//            }
+//        });
 
 
+
+
+    }
+
+    public void onBtnClick(View view) {
+        Intent in = new Intent(MainActivity.this, DetailsActivity.class);
+        in.putExtra("div", divDetails);
+        in.putExtra("dis", disDetails);
+        startActivity(in);
     }
 }
