@@ -8,23 +8,22 @@ import android.widget.TextView;
 public class DetailsActivity extends AppCompatActivity {
 
 
-    String divName, disName;
+    String result;
 
-    TextView divTv, disTv;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        divName = getIntent().getStringExtra("div");
-        disName = getIntent().getStringExtra("dis");
+        result = getIntent().getStringExtra("result");
 
-        disTv = findViewById(R.id.idDis);
-        divTv = findViewById(R.id.idDiv);
 
-        divTv.setText(divName+"\n");
-        disTv.setText(disName);
+        tv = findViewById(R.id.idTv);
+
+        tv.setText(result+"\n");
+
 
     }
 }

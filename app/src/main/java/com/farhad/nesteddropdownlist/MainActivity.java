@@ -8,20 +8,29 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] divName;
-    String[] disName;
-    String divDetails="", disDetails="";
+    String[] ConvertType;
+
     Button btn;
     TextView tv;
 
-    Spinner spinnerDiv, spinnerDis;
+    Spinner spinnerType;
 
-    ArrayAdapter divAdapter, disAdapter;
+    ArrayAdapter typeAdapter;
+
+    EditText ed;
+
+    int selectedIndex = 0;
+
+    double result;
+
+    double valueTemp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,93 +39,37 @@ public class MainActivity extends AppCompatActivity {
 
         btn = findViewById(R.id.idBtn);
         tv = findViewById(R.id.idTv);
+        ed = findViewById(R.id.idET);
 
+        ed.setText(""+0);
+        spinnerType = findViewById(R.id.idSpinnerType);
 
-        spinnerDiv = findViewById(R.id.idSpinnerDiv);
-        spinnerDis = findViewById(R.id.idSpinnerDis);
+        ConvertType = getResources().getStringArray(R.array.typeConvert);
 
-
-        divName = getResources().getStringArray(R.array.division_name);
-
-
-
-        divAdapter = new ArrayAdapter(
+        typeAdapter = new ArrayAdapter(
                 this,
                 android.R.layout.simple_spinner_item,
-                divName);
+                ConvertType);
 
-        divAdapter.setDropDownViewResource(
+        typeAdapter.setDropDownViewResource(
                 android.R.layout
                         .simple_spinner_dropdown_item);
 
+        spinnerType.setAdapter(typeAdapter);
 
-        spinnerDiv.setAdapter(divAdapter);
-
-
-
-
-        spinnerDiv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long id) {
-                Object item = adapterView.getItemAtPosition(position);
 
-                divDetails = item.toString();
+                selectedIndex = position;
 
-
-                if (item != null) {
-
-
-
-                    switch (position){
-                        case 0:
-                            disName = getResources().getStringArray(R.array.dhaka_items);
-                            break;
-                        case 1:
-                            disName = getResources().getStringArray(R.array.chottogram_items);
-                            break;
-                        case 2:
-                            disName = getResources().getStringArray(R.array.rajshahi_items);
-                            break;
-                        case 3:
-                            disName = getResources().getStringArray(R.array.khulna_items);
-                            break;
-                        case 4:
-                            disName = getResources().getStringArray(R.array.barishal_items);
-                            break;
-                        case 5:
-                            disName = getResources().getStringArray(R.array.sylhet_items);
-                            break;
-                        case 6:
-                            disName = getResources().getStringArray(R.array.rongpur_items);
-                            break;
-                        case 7:
-                            disName = getResources().getStringArray(R.array.moymonshing_items);
-                            break;
-                        default:
-                            disName = getResources().getStringArray(R.array.dhaka_items);
-                            break;
-
-                    }
-
-
-                    disAdapter = new ArrayAdapter(MainActivity.this,
-                            android.R.layout.simple_spinner_item,
-                            disName);
-
-
-
-
-                    disAdapter.setDropDownViewResource(
-                            android.R.layout
-                                    .simple_spinner_dropdown_item);
-                    spinnerDis.setAdapter(disAdapter);
-
-
+                if(selectedIndex == 0){
+                    tv.setText("°F");
+                }else {
+                    tv.setText("°C");
                 }
-
-
             }
 
             @Override
@@ -125,51 +78,37 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        spinnerDis.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view,
-                                       int position, long id) {
-                Object item = adapterView.getItemAtPosition(position);
-                if (item != null) {
-
-                    disDetails = item.toString();
-
-
-                }
-
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                // TODO Auto-generated method stub
-
-            }
-        });
-
-
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                tv.setText(divDetails);
-//
-//                Intent in = new Intent(MainActivity.this, DetailsActivity.class);
-//                in.putExtra("div", divDetails);
-//                in.putExtra("dis", disDetails);
-//                startActivity(in);
-//            }
-//        });
-
-
-
-
     }
 
     public void onBtnClick(View view) {
+
+        String value = getData();
         Intent in = new Intent(MainActivity.this, DetailsActivity.class);
-        in.putExtra("div", divDetails);
-        in.putExtra("dis", disDetails);
+        in.putExtra("result", value);
+
         startActivity(in);
+    }
+
+    String getData(){
+
+
+        String text =ed.getText().toString();
+        if(!text.isEmpty()){
+            try
+            {
+                valueTemp= 0.0+Double.parseDouble(text);
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+        }
+
+
+        if(selectedIndex == 0){
+            result =  (valueTemp - 32.0)*(5.0/9.0);
+            return result+" °C";
+        }else{
+            result = (valueTemp*1.8)+32.0;
+            return result+" °F";
+        }
     }
 }

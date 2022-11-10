@@ -11,7 +11,7 @@
 
     <!--Spinner widget-->
     <Spinner
-        android:id="@+id/idSpinnerDiv"
+        android:id="@+id/idSpinnerType"
         android:layout_height="50dp"
         android:layout_width="160dp"
         android:layout_marginEnd="10dp"
@@ -20,32 +20,33 @@
         android:layout_marginTop="10dp"
         />
 
-    <Spinner
-        android:id="@+id/idSpinnerDis"
-        android:layout_height="50dp"
+
+    <LinearLayout
         android:layout_width="160dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/idET"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/idTv"
+            android:text="°F"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/idBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Details"
+        android:text="Convert"
         android:onClick="onBtnClick"/>
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"/>
 
-    <TextView
-        android:id="@+id/idTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"/>
 
 </LinearLayout>
